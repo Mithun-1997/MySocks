@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    color: #00A2FF; /* Hacker blue text */
+    background: #0D0D0D; /* Dark black background */
+    font: 600 16px/18px 'Open Sans', sans-serif;
+}
+
+*,:after,:before { box-sizing: border-box; }
+.clearfix:after, .clearfix:before { content: ''; display: table; }
+.clearfix:after { clear: both; display: block; }
+a { color: inherit; text-decoration: none; }
+
+.login-wrap {
+    width: 100%;
+    margin: auto;
+    max-width: 400px;
+    min-height: 600px;
+    position: relative;
+    background: url("/images/login.png") no-repeat center;
+    background-size: 100% auto;
+    background-color: #131313; /* Slightly lighter black for contrast */
+    box-shadow: 0 12px 15px 0 rgba(0, 162, 255, 0.24), 
+                0 17px 50px 0 rgba(0, 162, 255, 0.19);
+}
+
+.login-html {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 90px 70px 50px 70px;
+    background: rgba(13, 13, 13, 0.9);
+}
+
+.login-html .sign-in-htm,
+.login-html .sign-up-htm {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Animation: Show Sign In when selected */
+.login-html .sign-in:checked ~ .login-form .sign-in-htm {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation: Show Sign Up when selected */
+.login-html .sign-up:checked ~ .login-form .sign-up-htm {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.login-html .sign-in,
+.login-html .sign-up {
+    display: none;
+}
+
+.login-html .tab {
+    font-size: 22px;
+    margin-right: 15px;
+    padding-bottom: 5px;
+    margin: 0 15px 10px 0;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.login-html .sign-in:checked + .tab,
+.login-html .sign-up:checked + .tab {
+    color: #00A2FF;
+    border-color: #00A2FF;
+}
+
+.login-form {
+    min-height: 345px;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.login-form .group {
+    margin-bottom: 15px;
+}
+
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button {
+    width: 100%;
+    color: #00A2FF;
+    display: block;
+}
+
+.login-form .group .input {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background: rgba(0, 162, 255, 0.1);
+}
+
+.login-form .group input[data-type="password"] {
+    text-security: circle;
+    -webkit-text-security: circle;
+}
+
+.login-form .group .label {
+    color: #00A2FF;
+    font-size: 12px;
+}
+
+/* ✅ Improved Button with Smooth Animation */
+.login-form .group .button {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background: #00A2FF;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+}
+
+/* 🔹 Button Hover Effect */
+.login-form .group .button:hover {
+    background: #007ACC;
+    transform: scale(1.05);
+}
+
+/* 🔹 Adding Smooth Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-form .group .button {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.hr {
+    height: 2px;
+    margin: 60px 0 50px 0;
+    background: rgba(0, 162, 255, 0.2);
+}
+
+.foot-lnk {
+    text-align: center;
+}

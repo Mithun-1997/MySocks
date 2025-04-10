@@ -1,0 +1,113 @@
+src/main/java/com/devops/demo
+    DevOpsApplication.java
+
+    /server/filter
+         JwtAuthenticationFilter.java
+         CorsFilter.java
+    /server/gateway
+         GatewayServer.jav	 
+    /server/interceptor
+         LoggingInterceptor.java
+    /server/config
+         ServerConfig.java
+
+    /security/encryption
+         GenerateSecretKey.java
+         PasswordEncryptionUtil.java
+    /security/password
+         Setup.java
+         SuperAdminPasswordManager.java
+    /security/jwt
+	 JwtUtil.java
+	 JwtTokenProvider.java
+		
+    /service/auth
+         AuthService.java
+         AuthServiceImpl.java
+	CustomUserDetailsService.java
+    /service/user
+         UserService.java
+         UserServiceImpl.java
+         UserDetailsServiceImpl.java
+    /service/admin
+         AdminService.java
+         AdminServiceImpl.java
+    /service/permission
+         PermissionService.java
+
+    /controller
+         AuthenticationController.java
+         UserController.java
+         AdminController.java
+         HomeController.java
+
+    /dto
+         UserRequestDto.java
+         UserResponseDto.java
+         AdminRequestDto.java
+         AdminResponseDto.java
+         AuthRequestDto.java
+         AuthResponseDto.java
+         SignupRequestDto.java
+	 UserDTO.java
+
+     /database/entity   
+ 	 GatewayEntity.java 
+	  ProjectEntity.java
+    /database/business
+	Admin.java
+	User.java
+    /database/converter
+         RoleConverter.java
+         GenderConverter.java
+    /database/repository
+         UserRepository.java
+         AdminRepository.java
+	 EndpointPermissionRepository.java
+    /database/enums
+         Gender.java
+         Role.java
+    /database/permission
+	 EndpointPermission.java
+	 PermissionType.java
+ /database/gatewayEntityRepository
+	 GatewayRepository.java
+	 
+/database/projectEntityRepository
+	  ProjectRepository.java
+	 
+
+    /config
+         ApplicationConfig.java
+	 DatabaseConfig.java
+         EncryptionConfig.java
+	 GatewayDBConfig.java
+	 JwtConfig.java
+	 ProjectDBConfig.java     
+         SecurityConfig.java
+	 GatewayConfig.java
+	 
+    /logmaintain
+         LogUtil.java
+         LogConfiguration.java
+
+src/main/resources
+    /security
+         admin-password.enc
+         supremeAdmin-password.enc
+         encryption.key
+    /config
+         application.properties
+         environment.properties
+	 spring.properties
+	 server-ssl.properties
+    /database
+         gateway.sql  ==> gateway schema
+         project.sql  ==> project schema
+    /static
+         /css
+         /js
+         /images
+    /templates
+         login.html
+         admin.html

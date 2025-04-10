@@ -1,0 +1,28 @@
+Supreme Admin Password Management Notes
+1️⃣ Setup Supreme Admin Password (Run Once)
+Run the following command to set up the Supreme Admin password for the first time:
+
+sh
+Copy
+Edit
+java com.devops.security.suprempassword.Setup
+This prompts for the Supreme Admin name (hardcoded as "supremeadmin").
+Asks for the password and confirmation password.
+If passwords match, the system encrypts and stores the password in:
+📂 src/main/java/com/devops/security/suprempassword/file/supremeAdmin-password.enc
+2️⃣ Update Supreme Admin Password
+To update the Supreme Admin password, run:
+
+sh
+Copy
+Edit
+java com.devops.security.suprempassword.SuperAdminPasswordManager
+Asks for the old password and verifies it.
+If the old password is correct, prompts for the new password and confirmation password.
+Updates supremeAdmin-password.enc with the new encrypted password.
+✅ Security Features:
+
+Uses AES encryption for password storage.
+Ensures password confirmation before saving.
+Verifies old password before updating.
+Now, your Supreme Admin credentials are securely managed! 🔐🚀

@@ -1,0 +1,4 @@
+http://localhost:8080/server/user/login
+http://localhost:8080/server/user/register
+http://localhost:8080/server/user/getUserAll
+http://localhost:8080/server/user/getUser/{id}
